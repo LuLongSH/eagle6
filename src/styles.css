@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+
+
+.plus-button .mat-button-wrapper {
+  padding: 0 !important;
+  line-height: 8px !important;
+  font-size: 23px;
+  color: black;
+  font-weight: 200;
+}
+
+ .enteties-wrapper .mat-expansion-panel-header-description{
+  margin-top: 8px;
+  margin-right: 100px;
+}
+
+
+
+.mat-pseudo-checkbox-checked{
+  background: darkblue !important;
+}

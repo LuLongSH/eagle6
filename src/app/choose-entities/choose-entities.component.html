@@ -1,0 +1,38 @@
+<div class="page-wrapper">
+  <span class="goal">2016 KPI:$15M Renewal Revenue (Strategic Goal)</span>
+  <h1>Add entities</h1>
+
+
+    <mat-selection-list
+      class="entity-list"
+    >
+      <mat-list-item>
+            <mat-icon matPrefix>search</mat-icon>
+            <input matInput
+                   placeholder="Search entity"
+                   [(ngModel)]="searchStr"
+                   class="search-input">
+            <mat-icon matPrefix
+                      class="filter-button"
+                      (click)="sortBtnClickHandler()">
+              filter_list
+            </mat-icon>
+      </mat-list-item>
+      <mat-list-option
+        checkboxPosition="before"
+        selected="{{entity.chosen}}"
+        (click)="optionClickHandler(entity)"
+        class="entity-wrapper"
+        *ngFor="let entity of this.entities  | search: searchStr | sort: filterReverse">
+        <span>{{entity.name}}</span>
+        <span class="entity-group">{{entity.group}}</span>
+      </mat-list-option>
+    </mat-selection-list>
+
+
+  <button mat-raised-button
+          class="connect-button"
+          (click)="btnClickHandler($event)">
+    connect
+  </button>
+</div>
